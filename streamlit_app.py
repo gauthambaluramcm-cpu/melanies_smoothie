@@ -8,7 +8,7 @@ st.write(
   """
 )
 
-cnx = st.connection("Snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.orders") \
     .filter(col("ORDER_FILLED") == 0) \
